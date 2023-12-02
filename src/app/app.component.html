@@ -1,0 +1,110 @@
+<style>
+.content{
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  width: 300px;
+}
+
+input {
+  padding: 0.5rem 0rem;
+  font-size: 1rem;
+  width: 300px;
+}
+
+button {
+  margin-top: 0.5rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0.5rem 0rem;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--electric-violet);
+}
+
+  .medicine-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.medicine-table th, .medicine-table td {
+  border: 1px solid #ddd; /* Add borders to cells */
+  padding: 8px;
+  text-align: left;
+}
+
+.medicine-table th {
+  background-color: #f2f2f2; /* Add background color to header cells */
+}
+
+.medicine-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Add alternating background color to even rows */
+}
+
+.medicine-table tr:hover {
+  background-color: #f5f5f5; /* Add background color on hover */
+}
+.error-message{
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+</style>
+
+<main class="main">
+  <div class="content">
+    <form (submit)="addMedicine()">
+      <h1>Medicine Data</h1>
+      <label>
+        Name:
+        <input [(ngModel)]="medicineName" name="name" required>
+      </label>
+      <label>
+        Manufacturer:
+        <input [(ngModel)]="medicineManufactorer" name="manufactorer" required>
+      </label>
+      <label>
+        Price:
+        <input  type="number" [(ngModel)]="medicinePrice" name="price" required>
+      </label>
+      <button appMyDirective type="submit">Add Medicine</button>
+      <div *ngIf="errorMessage" class="error-message" appMyDirective>
+        {{ errorMessage }}
+      </div>
+    </form>
+    
+    <table class="medicine-table">
+      <thead>
+        <tr>
+          <th appMyDirective>Medicine ID</th>
+          <th appMyDirective>Name</th>
+          <th appMyDirective>Manufacturer</th>
+          <th appMyDirective>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let medicine of medicines">
+          <td>{{ medicine.medicineId }}</td>
+          <td>{{ medicine.name }}</td>
+          <td>{{ medicine.manufactorer }}</td>
+          <td>{{ medicine.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
