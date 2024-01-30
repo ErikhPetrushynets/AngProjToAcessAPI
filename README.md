@@ -1,27 +1,11 @@
-# AngularKpzErikh
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<b>Language</b>: TS <br> 
+<b>Project Name</b>: Angular project for accessing API-s and performing database operations <br> <br>
+This project uses the following Angular elements:
+- module
+- router
+- component
+- pipe
+- directive
+- service
+- interceptor
+<img width="622" alt="Знімок екрана 2024-01-30 о 19 54 17" src="https://github.com/ErikhPetrushynets/angular-kpz-erikh/assets/132948467/49c1a227-dd35-4ee9-b225-47c2becec45a">
